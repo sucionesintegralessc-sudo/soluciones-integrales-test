@@ -61,15 +61,9 @@ h1 {
 }
 
 @keyframes brilloLento {
-    0% {
-        background-position: 200% 0;
-    }
-    40% {
-        background-position: 0% 0;
-    }
-    100% {
-        background-position: 0% 0;
-    }
+    0% { background-position: 200% 0; }
+    40% { background-position: 0% 0; }
+    100% { background-position: 0% 0; }
 }
 
 /* ==========================================
@@ -194,7 +188,7 @@ h1 {
 }
 
 /* ==========================================
-   BLOQUE DE CONTACTO AGRUPADO CON ICONOS MEJORADOS
+   BLOQUE DE CONTACTO AGRUPADO
    ========================================== */
 .contact-hub {
     display: flex;
@@ -206,7 +200,7 @@ h1 {
 
 .contact-link {
     color: #00ffd5;
-    font-size: 1rem; /* Tamaño de texto más legible */
+    font-size: 1rem;
     text-decoration: none;
     transition: color 0.2s;
     display: flex;
@@ -219,17 +213,19 @@ h1 {
     text-decoration: underline;
 }
 
-/* Tamaño controlado para el icono de sobre / correo */
 .contact-icon {
     font-size: 1.2rem; 
 }
 
-/* Tamaño controlado para la imagen del logo de Instagram */
+/* REGLA ESTRICTA PARA FORZAR EL TAMAÑO PEQUEÑO DEL LOGO DE INSTAGRAM */
 .img-icon {
-    width: 20px;
-    height: 20px;
+    width: 20px !important;
+    height: 20px !important;
+    max-width: 20px !important;
+    max-height: 20px !important;
     border-radius: 4px;
     object-fit: cover;
+    display: inline-block;
     vertical-align: middle;
 }
 
