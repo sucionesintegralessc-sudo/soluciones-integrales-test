@@ -1,0 +1,231 @@
+/* ==========================================
+   ESTILOS GENERALES Y DEGRADADO INDUSTRIAL
+   ========================================== */
+body {
+    background: linear-gradient(to bottom, #050505, #0b1329) !important;
+    background-attachment: fixed !important;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 950px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 1.7rem;
+    margin: 5px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ==========================================
+   ESTILO Y ANIMACIÓN DEL SLOGAN (DESTELLO LENTO Y REPOSO BRILLANTE)
+   ========================================== */
+.slogan {
+    font-family: 'Dancing Script', cursive;
+    color: #d4d4d4;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: -5px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+    
+    background: linear-gradient(90deg, 
+        rgba(212, 212, 212, 0.4) 0%, 
+        rgba(255, 255, 255, 1.0) 50%, 
+        rgba(212, 212, 212, 0.4) 100%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    
+    animation: brilloLento 9s ease-in-out infinite;
+}
+
+@keyframes brilloLento {
+    0% {
+        background-position: 200% 0;
+    }
+    40% {
+        background-position: 0% 0;
+    }
+    100% {
+        background-position: 0% 0;
+    }
+}
+
+/* ==========================================
+   REJILLA DE TARJETAS (CENTRADAS Y ADAPTABLES)
+   ========================================== */
+.grid-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(410px, 1fr));
+    gap: 15px;
+    width: 100%;
+    max-width: 950px;
+    margin: 10px auto;
+    justify-content: center;
+    justify-items: center;
+}
+
+/* ==========================================
+   TARJETAS CON EFECTO DE DESTELLO DIAGONAL EN CASCADA
+   ========================================== */
+.hub-card {
+    background: #0b1329;
+    border: 1px solid #1c2b59;
+    border-radius: 8px;
+    padding: 15px 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    width: 100%;
+    max-width: 450px;
+    box-sizing: border-box;
+    
+    position: relative;
+    overflow: hidden;
+}
+
+.hub-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0) 40%,
+        rgba(255, 255, 255, 0.08) 50%,
+        rgba(255, 255, 255, 0) 60%
+    );
+    
+    transform: rotate(30deg) translateY(-100%);
+    pointer-events: none;
+    animation: destelloDiagonal 12s ease-in-out infinite;
+}
+
+.grid-main .hub-card:nth-child(1)::after {
+    animation-delay: 1s;
+}
+
+.grid-main .hub-card:nth-child(2)::after {
+    animation-delay: 3s;
+}
+
+.grid-main .hub-card:nth-child(3)::after {
+    animation-delay: 5s;
+}
+
+.grid-main .hub-card:nth-child(4)::after {
+    animation-delay: 7s;
+}
+
+@keyframes destelloDiagonal {
+    0% {
+        transform: rotate(30deg) translateY(-100%);
+    }
+    30% {
+        transform: rotate(30deg) translateY(100%);
+    }
+    100% {
+        transform: rotate(30deg) translateY(100%);
+    }
+}
+
+.hub-card h2 {
+    color: #00ffd5;
+    font-size: 1.15rem;
+    margin-top: 0;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #1c2b59;
+    padding-bottom: 6px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.hub-card ul {
+    margin: 0;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.hub-card li {
+    margin-bottom: 5px;
+}
+
+.hub-card a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.hub-card a:hover {
+    color: #00ffd5;
+}
+
+/* ==========================================
+   BOTÓN DE WHATSAPP CON EFECTO DE PULSO / RESPLANDOR
+   ========================================== */
+.btn-wsp {
+    display: inline-block;
+    background-color: #00e676;
+    color: #000;
+    padding: 8px 22px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 10px 0;
+    box-shadow: 0 4px 10px rgba(0,230,118,0.3);
+    
+    /* Aplicamos la animación de pulso sutil */
+    animation: pulsoWsp 3s ease-in-out infinite;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Animación de resplandor intermitente para atraer la atención */
+@keyframes pulsoWsp {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 230, 118, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 12px rgba(0, 230, 118, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 230, 118, 0);
+    }
+}
+
+/* Efecto al pasar el mouse por encima */
+.btn-wsp:hover {
+    background-color: #00c853;
+    transform: scale(1.03);
+}
+
+.footer {
+    margin-top: 8px;
+    font-size: 0.8rem;
+    color: #aaa;
+    text-align: center;
+    border-top: 1px solid #1c2b59;
+    padding-top: 8px;
+    width: 100%;
+}
