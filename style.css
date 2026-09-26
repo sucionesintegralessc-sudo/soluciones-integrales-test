@@ -163,7 +163,7 @@ h1 {
 }
 
 /* ==========================================
-   BOTÓN DE WHATSAPP AJUSTADO PARA MÓVIL
+   BOTÓN DE WHATSAPP
    ========================================== */
 .btn-wsp {
     display: inline-block;
@@ -172,14 +172,14 @@ h1 {
     padding: 10px 20px;
     border-radius: 30px;
     font-weight: bold;
-    font-size: 0.95rem; /* Ajustado para que no se parta en celulares */
+    font-size: 0.95rem;
     text-decoration: none;
     margin: 15px 0 10px 0;
     box-shadow: 0 4px 10px rgba(0,230,118,0.3);
     
     animation: pulsoWsp 3s ease-in-out infinite;
     transition: transform 0.2s ease, background-color 0.2s ease;
-    white-space: nowrap; /* Evita que quiebre el texto en varias líneas */
+    white-space: nowrap;
 }
 
 @keyframes pulsoWsp {
@@ -194,26 +194,43 @@ h1 {
 }
 
 /* ==========================================
-   BLOQUE DE CONTACTO AGRUPADO (CORREO E INSTAGRAM)
+   BLOQUE DE CONTACTO AGRUPADO CON ICONOS MEJORADOS
    ========================================== */
 .contact-hub {
     display: flex;
     flex-direction: column;
-    gap: 6px;
-    margin-bottom: 12px;
+    gap: 8px;
+    margin-bottom: 15px;
     align-items: center;
 }
 
 .contact-link {
     color: #00ffd5;
-    font-size: 0.9rem;
+    font-size: 1rem; /* Tamaño de texto más legible */
     text-decoration: none;
     transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .contact-link:hover {
     color: #ffffff;
     text-decoration: underline;
+}
+
+/* Tamaño controlado para el icono de sobre / correo */
+.contact-icon {
+    font-size: 1.2rem; 
+}
+
+/* Tamaño controlado para la imagen del logo de Instagram */
+.img-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    object-fit: cover;
+    vertical-align: middle;
 }
 
 /* ==========================================
