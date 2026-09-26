@@ -14,7 +14,7 @@ body {
     justify-content: flex-start;
     min-height: 100vh;
     box-sizing: border-box;
-    overflow-y: auto; /* Permite el scroll vertical en todos los dispositivos */
+    overflow-y: auto;
 }
 
 .container {
@@ -36,7 +36,7 @@ h1 {
 }
 
 /* ==========================================
-   ESTILO Y ANIMACIÓN DEL SLOGAN (DESTELLO LENTO Y REPOSO BRILLANTE)
+   ESTILO Y ANIMACIÓN DEL SLOGAN
    ========================================== */
 .slogan {
     font-family: 'Dancing Script', cursive;
@@ -73,7 +73,7 @@ h1 {
 }
 
 /* ==========================================
-   REJILLA DE TARJETAS (CENTRADAS Y ADAPTABLES)
+   REJILLA DE TARJETAS Y DESTELLO DIAGONAL
    ========================================== */
 .grid-main {
     display: grid;
@@ -86,9 +86,6 @@ h1 {
     justify-items: center;
 }
 
-/* ==========================================
-   TARJETAS CON EFECTO DE DESTELLO DIAGONAL EN CASCADA
-   ========================================== */
 .hub-card {
     background: #0b1329;
     border: 1px solid #1c2b59;
@@ -123,32 +120,15 @@ h1 {
     animation: destelloDiagonal 12s ease-in-out infinite;
 }
 
-.grid-main .hub-card:nth-child(1)::after {
-    animation-delay: 1s;
-}
-
-.grid-main .hub-card:nth-child(2)::after {
-    animation-delay: 3s;
-}
-
-.grid-main .hub-card:nth-child(3)::after {
-    animation-delay: 5s;
-}
-
-.grid-main .hub-card:nth-child(4)::after {
-    animation-delay: 7s;
-}
+.grid-main .hub-card:nth-child(1)::after { animation-delay: 1s; }
+.grid-main .hub-card:nth-child(2)::after { animation-delay: 3s; }
+.grid-main .hub-card:nth-child(3)::after { animation-delay: 5s; }
+.grid-main .hub-card:nth-child(4)::after { animation-delay: 7s; }
 
 @keyframes destelloDiagonal {
-    0% {
-        transform: rotate(30deg) translateY(-100%);
-    }
-    30% {
-        transform: rotate(30deg) translateY(100%);
-    }
-    100% {
-        transform: rotate(30deg) translateY(100%);
-    }
+    0% { transform: rotate(30deg) translateY(-100%); }
+    30% { transform: rotate(30deg) translateY(100%); }
+    100% { transform: rotate(30deg) translateY(100%); }
 }
 
 .hub-card h2 {
@@ -183,33 +163,29 @@ h1 {
 }
 
 /* ==========================================
-   BOTÓN DE WHATSAPP CON EFECTO DE PULSO / RESPLANDOR
+   BOTÓN DE WHATSAPP AJUSTADO PARA MÓVIL
    ========================================== */
 .btn-wsp {
     display: inline-block;
     background-color: #00e676;
     color: #000;
-    padding: 8px 22px;
+    padding: 10px 20px;
     border-radius: 30px;
     font-weight: bold;
+    font-size: 0.95rem; /* Ajustado para que no se parta en celulares */
     text-decoration: none;
-    margin: 10px 0;
+    margin: 15px 0 10px 0;
     box-shadow: 0 4px 10px rgba(0,230,118,0.3);
     
     animation: pulsoWsp 3s ease-in-out infinite;
     transition: transform 0.2s ease, background-color 0.2s ease;
+    white-space: nowrap; /* Evita que quiebre el texto en varias líneas */
 }
 
 @keyframes pulsoWsp {
-    0% {
-        box-shadow: 0 0 0 0 rgba(0, 230, 118, 0.4);
-    }
-    70% {
-        box-shadow: 0 0 0 12px rgba(0, 230, 118, 0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(0, 230, 118, 0);
-    }
+    0% { box-shadow: 0 0 0 0 rgba(0, 230, 118, 0.4); }
+    70% { box-shadow: 0 0 0 12px rgba(0, 230, 118, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 230, 118, 0); }
 }
 
 .btn-wsp:hover {
@@ -217,13 +193,40 @@ h1 {
     transform: scale(1.03);
 }
 
+/* ==========================================
+   BLOQUE DE CONTACTO AGRUPADO (CORREO E INSTAGRAM)
+   ========================================== */
+.contact-hub {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 12px;
+    align-items: center;
+}
+
+.contact-link {
+    color: #00ffd5;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.contact-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* ==========================================
+   PIE DE PÁGINA LIMPIO
+   ========================================== */
 .footer {
-    margin-top: 8px;
-    font-size: 0.8rem;
-    color: #aaa;
+    margin-top: 5px;
+    font-size: 0.75rem;
+    color: #999;
     text-align: center;
     border-top: 1px solid #1c2b59;
     padding-top: 8px;
     width: 100%;
+    max-width: 600px;
     margin-bottom: 15px;
 }
