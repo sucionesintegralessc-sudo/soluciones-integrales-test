@@ -7,14 +7,14 @@ body {
     color: #e0e0e0;
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 5px 10px;
+    padding: 15px 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     min-height: 100vh;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow-y: auto; /* Permite el scroll vertical en todos los dispositivos */
 }
 
 .container {
@@ -196,12 +196,10 @@ h1 {
     margin: 10px 0;
     box-shadow: 0 4px 10px rgba(0,230,118,0.3);
     
-    /* Aplicamos la animación de pulso sutil */
     animation: pulsoWsp 3s ease-in-out infinite;
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-/* Animación de resplandor intermitente para atraer la atención */
 @keyframes pulsoWsp {
     0% {
         box-shadow: 0 0 0 0 rgba(0, 230, 118, 0.4);
@@ -214,7 +212,6 @@ h1 {
     }
 }
 
-/* Efecto al pasar el mouse por encima */
 .btn-wsp:hover {
     background-color: #00c853;
     transform: scale(1.03);
@@ -228,4 +225,5 @@ h1 {
     border-top: 1px solid #1c2b59;
     padding-top: 8px;
     width: 100%;
+    margin-bottom: 15px;
 }
