@@ -157,8 +157,10 @@ h1 {
 }
 
 /* ==========================================
-   BOTÓN DE WHATSAPP
+   SECUENCIA DE CONTACTO EN CASCADA (PAUSADA)
    ========================================== */
+
+/* 1. WhatsApp (Inicia de primero) */
 .btn-wsp {
     display: inline-block;
     background-color: #00e676;
@@ -168,18 +170,12 @@ h1 {
     font-weight: bold;
     font-size: 0.95rem;
     text-decoration: none;
-    margin: 15px 0 10px 0;
-    box-shadow: 0 4px 10px rgba(0,230,118,0.3);
-    
-    animation: pulsoWsp 3s ease-in-out infinite;
-    transition: transform 0.2s ease, background-color 0.2s ease;
+    margin: 15px 0 12px 0;
     white-space: nowrap;
-}
-
-@keyframes pulsoWsp {
-    0% { box-shadow: 0 0 0 0 rgba(0, 230, 118, 0.4); }
-    70% { box-shadow: 0 0 0 12px rgba(0, 230, 118, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(0, 230, 118, 0); }
+    
+    animation: pulsoSuave 9s ease-in-out infinite;
+    animation-delay: 0s;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .btn-wsp:hover {
@@ -187,13 +183,10 @@ h1 {
     transform: scale(1.03);
 }
 
-/* ==========================================
-   BLOQUE DE CONTACTO AGRUPADO
-   ========================================== */
 .contact-hub {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
     margin-bottom: 15px;
     align-items: center;
 }
@@ -202,22 +195,51 @@ h1 {
     color: #00ffd5;
     font-size: 1rem;
     text-decoration: none;
-    transition: color 0.2s;
+    transition: color 0.2s, transform 0.2s;
     display: flex;
     align-items: center;
     gap: 6px;
+    padding: 4px 12px;
+    border-radius: 20px;
 }
 
 .contact-link:hover {
     color: #ffffff;
-    text-decoration: underline;
+    background-color: rgba(0, 255, 213, 0.08);
+}
+
+/* 2. Correo (Pulsa a los 3 segundos) */
+.pulse-email {
+    animation: pulsoSuave 9s ease-in-out infinite;
+    animation-delay: 3s;
+}
+
+/* 3. Instagram (Pulsa a los 6 segundos) */
+.pulse-ig {
+    animation: pulsoSuave 9s ease-in-out infinite;
+    animation-delay: 6s;
+}
+
+/* Animación común: un resplandor elegante y pausado, sin prisa */
+@keyframes pulsoSuave {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 255, 213, 0);
+    }
+    15% {
+        box-shadow: 0 0 12px 3px rgba(0, 255, 213, 0.35);
+    }
+    30% {
+        box-shadow: 0 0 0 0 rgba(0, 255, 213, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 255, 213, 0);
+    }
 }
 
 .contact-icon {
     font-size: 1.2rem; 
 }
 
-/* REGLA ESTRICTA PARA FORZAR EL TAMAÑO PEQUEÑO DEL LOGO DE INSTAGRAM */
 .img-icon {
     width: 20px !important;
     height: 20px !important;
