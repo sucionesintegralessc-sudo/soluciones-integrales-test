@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
+<!DOCTYPE html><html lang="es"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soluciones Integrales | Diseño, Fabricación y Adecuación</title>
+    <title>Soluciones Integrales | Diseño, Fabricación y Ejecución</title>
+    <link rel="icon" type="image/png" href="favicon.png">
     
-    <!-- Google tag (gtag.js) - Google Analytics -->
+    <!-- GOOGLE ANALYTICS (GA4) -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6RV10B8D5K"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -15,130 +15,98 @@
       gtag('config', 'G-6RV10B8D5K');
     </script>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Hoja de Estilos Principal (Ajustada para subcarpeta de GitHub Pages) -->
+    <!-- Enlace a la fuente Dancing Script para el eslogan -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <!-- Enlace a la hoja de estilos principal -->
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
+</head><body>
 
-    <!-- Animación de Esquina (Corner-Flash / Sweep) -->
-    <div class="corner-flash-container">
-        <div class="corner-flash-star"></div>
-        <div class="corner-flash-sweep"></div>
+    <!-- CAPA DE DESTELLO GLOBAL Y DESTELLO DE ESQUINA -->
+    <div class="global-sweep"></div>
+    <div class="corner-flash">
+        <div class="rayo-h"></div>
     </div>
 
-    <!-- Cabecera y Navegación Principal -->
-    <header class="site-header">
-        <div class="container header-container">
-            <div class="logo-area">
-                <h1>Soluciones Integrales</h1>
-                <p class="tagline">Metalmecánica, Carpintería y Adecuación de Espacios</p>
-            </div>
-            <nav class="main-nav">
+    <div class="container">
+        <!-- Eslogan con efecto de destello metálico -->
+        <div class="slogan">Diseñamos lo que sueñas... te entregamos lo que quieres !</div>
+
+        <!-- Logotipo Principal -->
+        <img src="logo-principal.png" alt="Soluciones Integrales Logo" style="max-width: 140px; height: auto; margin: 2px 0;">
+
+        <!-- Título principal de la empresa -->
+        <h1>Soluciones Integrales</h1>
+        <div style="color: #00ffd5; font-size: 0.95rem; font-weight: bold; letter-spacing: 2px; margin-bottom: 15px; text-transform: uppercase;">
+            Diseño • Fabricación • Ejecución
+        </div>
+
+        <!-- REJILLA DE TARJETAS DE SERVICIOS -->
+        <div class="grid-main">
+            <!-- Tarjeta 1: Metalmecánica -->
+            <div class="hub-card">
+                <h2>Metalmecánica</h2>
                 <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#catalogo">Catálogo Paramétrico</a></li>
-                    <li><a href="#solar">Energía Solar</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
+                    <li>Estructuras</li>
+                    <li>Portones</li>
+                    <li>Puertas Basculantes</li>
+                    <li>Rejas de Seguridad</li>
                 </ul>
-            </nav>
-        </div>
-    </header>
+            </div>
 
-    <!-- Sección Hero Principal -->
-    <section id="inicio" class="hero-section">
-        <div class="container hero-content">
-            <span class="badge-location">San Cristóbal, Táchira, Venezuela</span>
-            <h2>Ingeniería, Precisión y Acabados de Primera</h2>
-            <p>Desarrollamos soluciones robustas en metalmecánica estructural, mobiliario a la medida y sistemas de iluminación solar con autonomía garantizada.</p>
-            <div class="hero-buttons">
-                <a href="#contacto" class="btn btn-primary">Solicitar Cotización</a>
-                <a href="#servicios" class="btn btn-secondary">Conocer Líneas</a>
+            <!-- Tarjeta 2: Mobiliario & Carpintería -->
+            <div class="hub-card">
+                <h2>Mobiliario & Carpintería</h2>
+                <ul>
+                    <li>Diseño industrial metal-madera</li>
+                    <li>Mobiliario en melamina a la medida</li>
+                    <li>Cocinas</li>
+                    <li>Closets</li>
+                </ul>
             </div>
-        </div>
-    </section>
 
-    <!-- Sección de Servicios -->
-    <section id="servicios" class="services-section container">
-        <div class="section-title">
-            <h2>Nuestras Áreas de Especialización</h2>
-            <p>Capacidad operativa respaldada por experiencia naval e industrial</p>
-        </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>Metalmecánica y Estructuras</h3>
-                <p>Fabricación de portones pesados, puertas pivotantes con rodamientos de precisión, rejas de seguridad y estructuras modulares livianas.</p>
+            <!-- Tarjeta 3: Adecuación de Espacios -->
+            <div class="hub-card">
+                <h2>Adecuación de Espacios</h2>
+                <ul>
+                    <li>Optimización</li>
+                    <li>Transformación integral</li>
+                    <li>Iluminación inteligente</li>
+                    <li>Sistemas solares</li>
+                </ul>
             </div>
-            <div class="service-card">
-                <h3>Carpintería y Mobiliario</h3>
-                <p>Diseño industrial en fusión metal-madera, mobiliario en melamina a la medida, cocinas, closets y estaciones de trabajo optimizadas.</p>
-            </div>
-            <div class="service-card">
-                <h3>Adecuación e Iluminación Solar</h3>
-                <p>Sistemas fotovoltaicos autónomos de 100W a 500W con 8 horas de autonomía continua y optimización integral de espacios comerciales y residenciales.</p>
-            </div>
-        </div>
-    </section>
 
-    <!-- Sección Catálogo Paramétrico / Destacados -->
-    <section id="catalogo" class="catalog-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Catálogo y Diseños Paramétricos</h2>
-                <p>Modelado avanzado en Autodesk Fusion 360 y optimización con MaxCut</p>
-            </div>
-            <div class="catalog-grid">
-                <div class="catalog-item">
-                    <h4>Puertas Pivotantes de Alta Carga</h4>
-                    <p>Diseño robusto con rodamiento inferior cónico (M12649/10) y superior de bolas (6204).</p>
-                </div>
-                <div class="catalog-item">
-                    <h4>Canopias y Toldos Desarmables</h4>
-                    <p>Estructuras modulares de 2x2 metros en perfiles PTR de 1 pulgada con nodo central tipo araña.</p>
-                </div>
-                <div class="catalog-item">
-                    <h4>Mobiliario Clínico y Auxiliar</h4>
-                    <p>Gabinetes móviles y soluciones a la medida para espacios de salud y oficinas especializadas.</p>
-                </div>
+            <!-- Tarjeta 4: Showroom & Tienda Digital -->
+            <div class="hub-card">
+                <h2>Showroom & Tienda Digital</h2>
+                <ul>
+                    <li>Lámparas solares (Exhibición y venta)</li>
+                    <li>Tornillería en acero inoxidable (Por encargo)</li>
+                    <li>Catálogo de planos paramétricos</li>
+                    <li>Modelos 3D y recursos descargables</li>
+                </ul>
             </div>
         </div>
-    </section>
 
-    <!-- Sección Energía Solar -->
-    <section id="solar" class="solar-section container">
-        <div class="solar-box">
-            <h2>Línea de Iluminación Solar Autónoma</h2>
-            <p>Protege tus espacios de los apagones y reduce la carga de tu red eléctrica con equipos de 100W a 500W e instalación profesional incluida en San Cristóbal.</p>
-            <a href="#contacto" class="btn btn-primary">Cotizar Sistema Solar</a>
+        <!-- BOTÓN PRINCIPAL DE WHATSAPP -->
+        <a href="https://wa.me/584247775046" class="btn-wsp" target="_blank">
+            💬 Contactar por WhatsApp: 0424 777 5046
+        </a>
+
+        <!-- BLOQUE DE CONTACTO EN CASCADA -->
+        <div class="contact-hub">
+            <a href="mailto:contacto@solucionesintegrales.com.ve" class="contact-link pulse-email">
+                <span class="contact-icon">✉️</span> contacto@solucionesintegrales.com.ve
+            </a>
+            <a href="https://instagram.com/solint_sc" class="contact-link pulse-ig" target="_blank">
+                <img src="instagram-icono.jpg" alt="Instagram" class="img-icon"> @solint_sc
+            </a>
         </div>
-    </section>
 
-    <!-- Sección de Contacto -->
-    <section id="contacto" class="contact-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Hablemos de Su Proyecto</h2>
-                <p>Atención directa en nuestro taller principal en San Cristóbal, Táchira</p>
-            </div>
-            <div class="contact-info">
-                <p><strong>Ubicación:</strong> San Cristóbal, Táchira, Venezuela</p>
-                <p><strong>Áreas de Cobertura:</strong> Instalación y asesoría técnica local</p>
-            </div>
+        <!-- PIE DE PÁGINA -->
+        <div class="footer">
+            RIF: V-12232024-0 • 📍 Calle 3 con Carrera 2, Local Nº 1-85, sector Santa Teresa, San Cristóbal, Táchira
         </div>
-    </section>
 
-    <!-- Pie de Página -->
-    <footer class="site-footer">
-        <div class="container footer-flex">
-            <p>&copy; 2026 Soluciones Integrales. Todos los derechos reservados.</p>
-            <p class="signature-font">Diseño y Fabricación Profesional</p>
-        </div>
-    </footer>
-
+    </div>
 </body>
 </html>
