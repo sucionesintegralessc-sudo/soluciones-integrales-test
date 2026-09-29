@@ -14,7 +14,7 @@ body {
     justify-content: center;
     min-height: 100vh;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow-x: hidden;
     position: relative;
 }
 
@@ -157,12 +157,69 @@ body {
     text-align: center;
 }
 
+/* Contenedor superior de cabecera adaptado a 950px de ancho máximo */
+.header-top-container {
+    width: 100%;
+    max-width: 950px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-bottom: 8px;
+}
+
 h1 {
     color: #ffffff;
     font-size: 1.6rem;
     margin: 4px 0;
     text-transform: uppercase;
     letter-spacing: 2px;
+    text-align: center;
+}
+
+/* Barra inferior de la cabecera que contiene el subtítulo centrado y el botón absoluto a la derecha */
+.sub-bar-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 950px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.sub-title-text {
+    color: #00ffd5;
+    font-size: 0.95rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* Botón de Nuestra Filosofía posicionado exactamente en la línea del subtítulo y alineado al borde derecho */
+.btn-filosofia-header {
+    position: absolute;
+    right: 0;
+    background: rgba(11, 19, 41, 0.9);
+    border: 1px solid #00ffd5;
+    color: #00ffd5;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: background-color 0.2s, color 0.2s, transform 0.2s;
+    box-shadow: 0 0 8px rgba(0, 255, 213, 0.2);
+}
+
+.btn-filosofia-header:hover {
+    background-color: #00ffd5;
+    color: #050505;
+    transform: translateY(-1px);
 }
 
 /* ==========================================
@@ -173,8 +230,8 @@ h1 {
     color: #d4d4d4;
     font-size: 1.7rem;
     font-weight: 600;
-    margin-top: -2px;
-    margin-bottom: 6px;
+    margin-top: 2px;
+    margin-bottom: 4px;
     letter-spacing: 1px;
     
     background: linear-gradient(90deg, 
@@ -288,6 +345,19 @@ h1 {
 }
 
 /* ==========================================
+   ETIQUETA DE CONFIANZA / PROMESA DE ENTREGA
+   ========================================== */
+.trust-badge {
+    color: #00ffd5;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 6px 0 2px 0;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+/* ==========================================
    SECUENCIA DE CONTACTO EN CASCADA
    ========================================== */
 .btn-wsp {
@@ -299,7 +369,7 @@ h1 {
     font-weight: bold;
     font-size: 0.9rem;
     text-decoration: none;
-    margin: 10px 0 8px 0;
+    margin: 8px 0 8px 0;
     white-space: nowrap;
     
     animation: pulsoSuave 9s ease-in-out infinite;
@@ -370,16 +440,101 @@ h1 {
 }
 
 /* ==========================================
-   PIE DE PÁGINA LIMPIO
+   PIE DE PÁGINA LIMPIO Y MEJORADO
    ========================================== */
 .footer {
     margin-top: 2px;
-    font-size: 0.7rem;
-    color: #999;
+    font-size: 0.75rem;
+    color: #b0b0b0;
     text-align: center;
     border-top: 1px solid #1c2b59;
     padding-top: 6px;
     width: 100%;
     max-width: 600px;
     margin-bottom: 5px;
+}
+
+/* ==========================================
+   ESTILOS DE LA VENTANA MODAL (FILOSOFÍA)
+   ========================================== */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.modal-content {
+    background: #0b1329;
+    border: 1px solid #00ffd5;
+    border-radius: 10px;
+    padding: 25px 30px;
+    width: 100%;
+    max-width: 550px;
+    box-shadow: 0 8px 24px rgba(0, 255, 213, 0.2);
+    position: relative;
+    text-align: left;
+    box-sizing: border-box;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-content h2 {
+    color: #00ffd5;
+    margin-top: 0;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #1c2b59;
+    padding-bottom: 8px;
+    text-align: center;
+}
+
+.modal-section {
+    margin-bottom: 15px;
+}
+
+.modal-section h3 {
+    color: #ffffff;
+    font-size: 1rem;
+    margin: 10px 0 4px 0;
+    text-transform: uppercase;
+}
+
+.modal-section p {
+    color: #d4d4d4;
+    font-size: 0.92rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.highlight-compromiso {
+    background: rgba(0, 255, 213, 0.05);
+    border-left: 3px solid #00ffd5;
+    padding: 8px 12px;
+    border-radius: 0 4px 4px 0;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: #00ffd5;
+    font-size: 1.8rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.modal-close:hover {
+    color: #ffffff;
 }

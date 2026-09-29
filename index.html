@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="es"><head>
+<!DOCTYPE html>
+<html lang="es">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soluciones Integrales | Diseño, Fabricación y Ejecución</title>
@@ -19,7 +21,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
     <!-- Enlace a la hoja de estilos principal -->
     <link rel="stylesheet" href="style.css">
-</head><body>
+</head>
+<body>
 
     <!-- CAPA DE DESTELLO GLOBAL Y DESTELLO DE ESQUINA -->
     <div class="global-sweep"></div>
@@ -28,16 +31,26 @@
     </div>
 
     <div class="container">
-        <!-- Eslogan con efecto de destello metálico -->
-        <div class="slogan">Diseñamos lo que sueñas... te entregamos lo que quieres !</div>
+        <!-- BLOQUE SUPERIOR DE CABECERA UNIFICADO -->
+        <div class="header-top-container">
+            <!-- 1. Logotipo Principal -->
+            <img src="logo-principal.png" alt="Soluciones Integrales Logo" style="max-width: 140px; height: auto; margin: 2px 0;">
 
-        <!-- Logotipo Principal -->
-        <img src="logo-principal.png" alt="Soluciones Integrales Logo" style="max-width: 140px; height: auto; margin: 2px 0;">
+            <!-- 2. Título Principal Centrado -->
+            <h1>Soluciones Integrales</h1>
 
-        <!-- Título principal de la empresa -->
-        <h1>Soluciones Integrales</h1>
-        <div style="color: #00ffd5; font-size: 0.95rem; font-weight: bold; letter-spacing: 2px; margin-bottom: 15px; text-transform: uppercase;">
-            Diseño • Fabricación • Ejecución
+            <!-- 3. Eslogan con efecto de destello metálico -->
+            <div class="slogan">Diseñamos lo que sueñas... te entregamos lo que quieres !</div>
+
+            <!-- 4. Línea de Subtítulo y Botón de Filosofía alineados horizontalmente -->
+            <div class="sub-bar-wrapper">
+                <div class="sub-title-text">
+                    Diseño • Fabricación • Ejecución
+                </div>
+                <a href="#filosofia-modal" class="btn-filosofia-header" onclick="document.getElementById('filosofia-modal').style.display='flex'; return false;">
+                    Nuestra Filosofía
+                </a>
+            </div>
         </div>
 
         <!-- REJILLA DE TARJETAS DE SERVICIOS -->
@@ -87,6 +100,11 @@
             </div>
         </div>
 
+        <!-- ETIQUETA DE CONFIANZA RÁPIDA -->
+        <div class="trust-badge">
+            ✔ Compromiso estricto en los tiempos de entrega
+        </div>
+
         <!-- BOTÓN PRINCIPAL DE WHATSAPP -->
         <a href="https://wa.me/584247775046" class="btn-wsp" target="_blank">
             💬 Contactar por WhatsApp: 0424 777 5046
@@ -108,5 +126,26 @@
         </div>
 
     </div>
+
+    <!-- VENTANA MODAL DE FILOSOFÍA (MISIÓN, VISIÓN Y TIEMPOS) -->
+    <div id="filosofia-modal" class="modal-overlay" onclick="if(event.target === this) this.style.display='none';">
+        <div class="modal-content">
+            <button class="modal-close" onclick="document.getElementById('filosofia-modal').style.display='none';">&times;</button>
+            <h2>Nuestra Filosofía</h2>
+            <div class="modal-section">
+                <h3>Misión</h3>
+                <p>Proveer soluciones efectivas y de alta calidad en metalmecánica, carpintería y adecuación de espacios, garantizando precisión técnica, materiales duraderos y un cumplimiento riguroso de los tiempos de entrega acordados con cada cliente en San Cristóbal.</p>
+            </div>
+            <div class="modal-section">
+                <h3>Visión</h3>
+                <p>Consolidarnos como el taller de referencia regional por nuestra seriedad operativa, capacidad de innovación en proyectos a la medida y un compromiso inquebrantable con la puntualidad y la satisfacción total.</p>
+            </div>
+            <div class="modal-section highlight-compromiso">
+                <h3>Compromiso de Entrega</h3>
+                <p>Asumimos la puntualidad como un pilar fundamental de nuestro trabajo: entregamos lo que prometemos en el tiempo exacto establecido.</p>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
