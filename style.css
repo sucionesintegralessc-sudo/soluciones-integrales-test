@@ -75,10 +75,9 @@ body {
     align-items: center;
     justify-content: center;
     animation: flashEstrellaRealista 1s ease-in-out forwards;
-    animation-delay: 2s; /* Aparece a los 2 segundos exactos */
+    animation-delay: 2s;
 }
 
-/* Núcleo central de luz intensa */
 .corner-flash::before {
     content: '';
     position: absolute;
@@ -90,7 +89,6 @@ body {
     box-shadow: 0 0 15px #ffffff, 0 0 30px rgba(0,255,213,0.7);
 }
 
-/* Eje Vertical con desvanecimiento absoluto en los extremos */
 .corner-flash::after {
     content: '';
     position: absolute;
@@ -110,7 +108,6 @@ body {
     z-index: 2;
 }
 
-/* Eje Horizontal idéntico para completar la cruz estelar finísima */
 .corner-flash .rayo-h {
     position: absolute;
     height: 2px;
@@ -157,7 +154,7 @@ body {
     text-align: center;
 }
 
-/* Contenedor superior de cabecera adaptado exactamente a 950px de ancho máximo */
+/* Contenedor superior de cabecera adaptado a 950px de ancho máximo */
 .header-top-container {
     width: 100%;
     max-width: 950px;
@@ -179,7 +176,7 @@ h1 {
     text-align: center;
 }
 
-/* Barra inferior de la cabecera con ancho exacto de 950px para alinear al borde de las tarjetas */
+/* Barra inferior de la cabecera (Escritorio) */
 .sub-bar-wrapper {
     position: relative;
     width: 100%;
@@ -200,7 +197,7 @@ h1 {
     text-align: center;
 }
 
-/* Botón de Nuestra Filosofía posicionado exactamente al borde derecho del contenedor de 950px */
+/* Botón de Nuestra Filosofía (Escritorio) */
 .btn-filosofia-header {
     position: absolute;
     right: 0;
@@ -539,4 +536,34 @@ h1 {
 
 .modal-close:hover {
     color: #ffffff;
+}
+
+/* ==========================================
+   ADAPTABILIDAD RESPONSIVA PARA MÓVILES (< 768px)
+   ========================================== */
+@media (max-width: 768px) {
+    .sub-bar-wrapper {
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 6px;
+    }
+
+    .sub-title-text {
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+    }
+
+    .btn-filosofia-header {
+        position: relative;
+        right: auto;
+        display: inline-block;
+        margin-top: 4px;
+        padding: 6px 16px;
+        font-size: 0.78rem;
+    }
+
+    .grid-main {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
 }
