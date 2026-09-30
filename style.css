@@ -344,19 +344,6 @@ h1 {
 }
 
 /* ==========================================
-   ETIQUETA DE CONFIANZA / PROMESA DE ENTREGA
-   ========================================== */
-.trust-badge {
-    color: #00ffd5;
-    font-size: 0.85rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-    margin: 6px 0 2px 0;
-    text-transform: uppercase;
-    opacity: 0.9;
-}
-
-/* ==========================================
    SECUENCIA DE CONTACTO EN CASCADA
    ========================================== */
 .btn-wsp {
@@ -368,7 +355,7 @@ h1 {
     font-weight: bold;
     font-size: 0.9rem;
     text-decoration: none;
-    margin: 8px 0 8px 0;
+    margin: 10px 0 8px 0;
     white-space: nowrap;
     
     animation: pulsoSuave 9s ease-in-out infinite;
