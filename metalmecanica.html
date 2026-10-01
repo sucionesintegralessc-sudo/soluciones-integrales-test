@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metalmecánica | Soluciones Integrales</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <!-- GOOGLE ANALYTICS (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6RV10B8D5K"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6RV10B8D5K');
+    </script>
+
+    <!-- Enlace a la fuente Dancing Script para el eslogan -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <!-- Enlace a la hoja de estilos principal -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ESTILOS DE TRANSICIÓN CINEMÁTICA Y APARICIÓN DIFERIDA DEL BOTÓN DE RETORNO -->
+    <style>
+        /* 1. EL ISOTIPO APARECE PRIMERO (De forma inmediata) */
+        .logo-animado {
+            max-width: 110px;
+            height: auto;
+            margin-bottom: 25px;
+            opacity: 0;
+            animation: isotipoCinematico 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s forwards;
+        }
+
+        @keyframes isotipoCinematico {
+            0% {
+                opacity: 0;
+                transform: scale(0.95);
+                filter: brightness(0.6);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+                filter: brightness(1);
+            }
+        }
+
+        /* 2. EL CONTENIDO APARECE DESPUÉS (Cascada fluida de 5 segundos) */
+        .fade-content-1 {
+            opacity: 0;
+            transform: translateY(-25px);
+            animation: despliegueVertical 5.0s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards;
+        }
+
+        .fade-content-2 {
+            opacity: 0;
+            transform: translateY(-25px);
+            animation: despliegueVertical 5.0s cubic-bezier(0.16, 1, 0.3, 1) 1.2s forwards;
+        }
+
+        .fade-content-3 {
+            opacity: 0;
+            transform: translateY(-25px);
+            animation: despliegueVertical 5.0s cubic-bezier(0.16, 1, 0.3, 1) 1.6s forwards;
+        }
+
+        @keyframes despliegueVertical {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 3. APARICIÓN ULTRA-SUTIL Y DIFERIDA DEL BOTÓN "VOLVER AL INICIO" (Delay de 5s + Fade in suave) */
+        .btn-retorno-diferido {
+            opacity: 0;
+            animation: aparecerBotonRetorno 2.5s ease-in-out 5.0s forwards;
+        }
+
+        @keyframes aparecerBotonRetorno {
+            0% {
+                opacity: 0;
+                transform: translateY(-5px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Destello único de las tarjetas sincronizado */
+        .hub-card::after {
+            animation: destelloUnicoTarjetas 2.0s ease-in-out forwards !important;
+        }
+
+        .grid-main .hub-card:nth-child(1)::after { animation-delay: 1.8s; }
+        .grid-main .hub-card:nth-child(2)::after { animation-delay: 2.1s; }
+        .grid-main .hub-card:nth-child(3)::after { animation-delay: 2.4s; }
+        .grid-main .hub-card:nth-child(4)::after { animation-delay: 2.7s; }
+
+        @keyframes destelloUnicoTarjetas {
+            0% {
+                transform: rotate(30deg) translateY(-100%);
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: rotate(30deg) translateY(100%);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- BLOQUE SUPERIOR DE CABECERA UNIFICADO -->
+        <div class="header-top-container" style="margin-top: 15px;">
+            <!-- 1. Isotipo corporativo -->
+            <img src="logo-principal.png" alt="Soluciones Integrales Isotipo" class="logo-animado">
+
+            <!-- 2. Título de la Categoría -->
+            <h1 class="fade-content-1">Metalmecánica</h1>
+
+            <!-- 3. Eslogan corporativo -->
+            <div class="slogan fade-content-2">Diseñamos lo que sueñas... te entregamos lo que quieres !</div>
+
+            <!-- 4. Barra inferior con subtítulo y botón de retorno con aparición diferida a los 5s -->
+            <div class="sub-bar-wrapper fade-content-3" style="margin-top: 8px;">
+                <div class="sub-title-text">
+                    Ingeniería aplicada y estructuras robustas
+                </div>
+                <a href="index.html" class="btn-filosofia-header btn-retorno-diferido">
+                    ← Volver al Inicio
+                </a>
+            </div>
+        </div>
+
+        <!-- REJILLA DE SUBDIVISIÓN (TERCER NIVEL DIRECTO) -->
+        <div class="grid-main fade-content-3" style="margin-top: 20px;">
+            <!-- Subtarjeta 1: Estructuras -->
+            <div class="hub-card" onclick="location.href='metalmecanica_estructuras.html';" style="cursor: pointer;">
+                <h2>Estructuras Metálicas</h2>
+                <ul>
+                    <li>Galpones y naves industriales</li>
+                    <li>Techados y mezzaninas</li>
+                    <li>Soportes para cargas exigentes</li>
+                </ul>
+            </div>
+
+            <!-- Subtarjeta 2: Portones -->
+            <div class="hub-card" onclick="location.href='metalmecanica_portones.html';" style="cursor: pointer;">
+                <h2>Portones Industriales</h2>
+                <ul>
+                    <li>Diseños abatibles y corredizos</li>
+                    <li>Sistemas de alta frecuencia de tráfico</li>
+                    <li>Acabados anticorrosivos de precisión</li>
+                </ul>
+            </div>
+
+            <!-- Subtarjeta 3: Puertas Basculantes -->
+            <div class="hub-card" onclick="location.href='metalmecanica_basculantes.html';" style="cursor: pointer;">
+                <h2>Puertas Basculantes</h2>
+                <ul>
+                    <li>Sistemas de apertura vertical</li>
+                    <li>Maximización de espacio útil</li>
+                    <li>Funcionamiento suave y seguro</li>
+                </ul>
+            </div>
+
+            <!-- Subtarjeta 4: Rejas de Seguridad -->
+            <div class="hub-card" onclick="location.href='metalmecanica_rejas.html';" style="cursor: pointer;">
+                <h2>Rejas de Seguridad</h2>
+                <ul>
+                    <li>Protección perimetral avanzada</li>
+                    <li>Diseño arquitectónico integrado</li>
+                    <li>Herrajes y anclajes de alta confiabilidad</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- BOTÓN DE WHATSAPP ESPECÍFICO DE LA CATEGORÍA -->
+        <a href="https://wa.me/584247775046?text=Hola,%20Soluciones%20Integrales.%20Me%20interesa%20cotizar%20un%20proyecto%20de%20Metalmecánica." class="btn-wsp fade-content-3" target="_blank" style="margin-top: 15px;">
+            💬 Cotizar Metalmecánica por WhatsApp
+        </a>
+
+        <!-- PIE DE PÁGINA -->
+        <div class="footer fade-content-3" style="margin-top: 10px;">
+            RIF: V-12232024-0 • 📍 San Cristóbal, Táchira
+        </div>
+    </div>
+
+</body>
+</html>
