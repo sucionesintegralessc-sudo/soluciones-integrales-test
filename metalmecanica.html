@@ -17,104 +17,10 @@
 
     <!-- Enlace a la fuente Dancing Script para el eslogan -->
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
-    <!-- Enlace a la hoja de estilos principal -->
+    
+    <!-- ENLACES A HOJAS DE ESTILOS MODULARES -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- ESTILOS DE TRANSICIÓN CINEMÁTICA Y APARICIÓN DIFERIDA DEL BOTÓN DE RETORNO -->
-    <style>
-        /* 1. EL ISOTIPO APARECE PRIMERO (De forma inmediata) */
-        .logo-animado {
-            max-width: 110px;
-            height: auto;
-            margin-bottom: 25px;
-            opacity: 0;
-            animation: isotipoCinematico 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s forwards;
-        }
-
-        @keyframes isotipoCinematico {
-            0% {
-                opacity: 0;
-                transform: scale(0.95);
-                filter: brightness(0.6);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1);
-                filter: brightness(1);
-            }
-        }
-
-        /* 2. EL CONTENIDO APARECE DESPUÉS (Cascada fluida de 5 segundos) */
-        .fade-content-1 {
-            opacity: 0;
-            transform: translateY(-25px);
-            animation: despliegueVertical 5.0s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards;
-        }
-
-        .fade-content-2 {
-            opacity: 0;
-            transform: translateY(-25px);
-            animation: despliegueVertical 5.0s cubic-bezier(0.16, 1, 0.3, 1) 1.2s forwards;
-        }
-
-        .fade-content-3 {
-            opacity: 0;
-            transform: translateY(-25px);
-            animation: despliegueVertical 5.0s cubic-bezier(0.16, 1, 0.3, 1) 1.6s forwards;
-        }
-
-        @keyframes despliegueVertical {
-            0% {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* 3. APARICIÓN ULTRA-SUTIL Y DIFERIDA DEL BOTÓN "VOLVER AL INICIO" (Delay de 5s + Fade in suave) */
-        .btn-retorno-diferido {
-            opacity: 0;
-            animation: aparecerBotonRetorno 2.5s ease-in-out 5.0s forwards;
-        }
-
-        @keyframes aparecerBotonRetorno {
-            0% {
-                opacity: 0;
-                transform: translateY(-5px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Destello único de las tarjetas sincronizado */
-        .hub-card::after {
-            animation: destelloUnicoTarjetas 2.0s ease-in-out forwards !important;
-        }
-
-        .grid-main .hub-card:nth-child(1)::after { animation-delay: 1.8s; }
-        .grid-main .hub-card:nth-child(2)::after { animation-delay: 2.1s; }
-        .grid-main .hub-card:nth-child(3)::after { animation-delay: 2.4s; }
-        .grid-main .hub-card:nth-child(4)::after { animation-delay: 2.7s; }
-
-        @keyframes destelloUnicoTarjetas {
-            0% {
-                transform: rotate(30deg) translateY(-100%);
-                opacity: 0;
-            }
-            50% {
-                opacity: 0.8;
-            }
-            100% {
-                transform: rotate(30deg) translateY(100%);
-                opacity: 0;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style-segundonivel.css">
 </head>
 <body>
 
@@ -130,14 +36,11 @@
             <!-- 3. Eslogan corporativo -->
             <div class="slogan fade-content-2">Diseñamos lo que sueñas... te entregamos lo que quieres !</div>
 
-            <!-- 4. Barra inferior con subtítulo y botón de retorno con aparición diferida a los 5s -->
+            <!-- 4. Subtítulo técnico corporativo -->
             <div class="sub-bar-wrapper fade-content-3" style="margin-top: 8px;">
-                <div class="sub-title-text">
+                <div class="sub-title-text" style="width: 100%; text-align: center;">
                     Ingeniería aplicada y estructuras robustas
                 </div>
-                <a href="index.html" class="btn-filosofia-header btn-retorno-diferido">
-                    ← Volver al Inicio
-                </a>
             </div>
         </div>
 
@@ -184,14 +87,26 @@
             </div>
         </div>
 
-        <!-- BOTÓN DE WHATSAPP ESPECÍFICO DE LA CATEGORÍA -->
-        <a href="https://wa.me/584247775046?text=Hola,%20Soluciones%20Integrales.%20Me%20interesa%20cotizar%20un%20proyecto%20de%20Metalmecánica." class="btn-wsp fade-content-3" target="_blank" style="margin-top: 15px;">
-            💬 Cotizar Metalmecánica por WhatsApp
-        </a>
+        <!-- BLOQUE DE ACCIÓN Y PIE DE PÁGINA MINIMALISTA -->
+        <div style="text-align: center; display: flex; flex-direction: column; align-items: center;" class="fade-content-3">
+            <!-- Botón de WhatsApp Principal -->
+            <a href="https://wa.me/584247775046?text=Hola,%20Soluciones%20Integrales.%20Me%20interesa%20cotizar%20un%20proyecto%20de%20Metalmecánica." class="btn-wsp" target="_blank" style="margin-top: 15px;">
+                💬 Cotizar Metalmecánica por WhatsApp
+            </a>
 
-        <!-- PIE DE PÁGINA -->
-        <div class="footer fade-content-3" style="margin-top: 10px;">
-            RIF: V-12232024-0 • 📍 San Cristóbal, Táchira
+            <!-- Botón de Retorno Diferido -->
+            <a href="index.html" class="btn-retorno-inferior">
+                ← Volver al Inicio
+            </a>
+        </div>
+
+        <!-- PIE DE PÁGINA SECUNDARIO (Enlaces discretos opcionales) -->
+        <div class="footer-secundario">
+            <div class="footer-social-links">
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+                <span>•</span>
+                <a href="mailto:contacto@solucionesintegrales.com">Correo Electrónico</a>
+            </div>
         </div>
     </div>
 
